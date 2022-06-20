@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ul,ol {
+	list-style: none;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.section3{
+  width: 100%;
+  height: 100%;
+  background-color: #20cab8;
+  /* background: url(../img/答题页面.png) no-repeat; */
+  background-size: 100% 100%;
+  display: none;
+  position: relative;
+}
+.zpdx{
+  width: 3.2rem;
+  height: 0.8rem;
+  position: absolute;
+  left: 0.9rem;
+  top: 0.6rem;
+  /* animation: big 1s infinite linear  alternate; */
+}
+.one{
+  width: 2rem;
+  height: 3rem;
+  position: absolute;
+  left: 0.6rem;
+  top: 2.46rem;
+  opacity: 0;
+  animation: move 1s linear  forwards;
+}
+.two{
+  width: 3.2rem;
+  height: 3.75rem;
+  position: absolute;
+  right: 1.2rem;
+  top: 1.9rem;
+  opacity: 0;
+  animation: move 1s linear 1s  forwards;
+}
+.three{
+  width: 2.15rem;
+  height: 3.4rem;
+  position: absolute;
+  left: 0.4rem;
+  top: 5.8rem;
+  opacity: 0;
+  animation: move 1s linear 2s  forwards;
+}
+.four{
+  width: 3.9rem;
+  height: 3.4rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 5.8rem;
+  opacity: 0;
+  animation: move 1s linear 3s  forwards;
+}
+.five{
+  width: 3rem;
+  height: 2.65rem;
+  position: absolute;
+  left: 0.4rem;
+  bottom: 1.3rem;
+  opacity: 0;
+  animation: move 1s linear 4s  forwards;
+}
+.qh{
+  width: 2.9rem;
+  height: 3rem;
+  position: absolute;
+  right: 0.4rem;
+  bottom: 1rem;
+}
+.six{
+  animation: big 1s infinite 0.2s linear alternate;
+}
+.six1{
+  opacity: 0;
+  animation: move 1s linear 5s forwards;
+}
+@keyframes move{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}

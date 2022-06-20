@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- 移动端的适配 -->
+  <script>
+    /**
+       * ================================================
+       *   设置根元素font-size
+       * 当设备宽度为375(iPhone6)时，根元素font-size=16px; 
+       × ================================================
+       */
+    (function (doc, win) {
+      var docEl = win.document.documentElement;
+      var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+      var refreshRem = function () {
+        var clientWidth = win.innerWidth
+          || doc.documentElement.clientWidth
+          || doc.body.clientWidth;
+
+        console.log(clientWidth)
+        if (!clientWidth) return;
+        var fz;
+        var width = clientWidth;
+        fz = 100 * width / 750;
+        docEl.style.fontSize = fz + 'px';//这样每一份也是16px,即1rem=16px
+      };
+
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, refreshRem, false);
+      doc.addEventListener('DOMContentLoaded', refreshRem, false);
+      refreshRem();
+
+    })(document, window);
+  </script>
+
+  <style>
+    #carousel-example-generic {
+      width: 100%;
+      height: calc(420rem/100);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #carousel-example-generic img {
+      width: 100%;
+      height: calc(420rem/100);
+    }
+  </style>
+
+  <script src="./lib/jquery.js"></script>
+  <link rel="stylesheet" href="./lib/bootstrap-3.4.1-dist/css/bootstrap.css">
+  <script src="./lib/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
+  <script src="./js/index.js"></script>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/section2.css">
+  <link rel="stylesheet" href="./css/section3.css">
+  <link rel="stylesheet" href="./css/section4.css">
+</head>
+
+<body>
+  <div class="section1">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1" class="active1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2" class="active2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="./img/1.jpg" alt="...">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="item">
+          <img src="./img/2.jpg" alt="...">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="item">
+          <img src="./img/3.png" alt="...">
+          <div class="carousel-caption">
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg btn-block bt1" id="bt1">国家安全知识答题</button>
+    <button type="button" class="btn btn-default btn-lg btn-block bt1" id="bt2">电信诈骗</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block bt1" id="bt3">如何做一个文明人</button>
+    <img src="./img/zp.png" alt="" class="zp">
+    <img src="./img/jq.png" alt="" class="jq">
+    <img src="./img/aq.jpg" alt="" class="aq">
+  </div>
+  <!-- <div class="section2">
+    <div class="font">
+      <p>1.《中华人民共和国网络安全法》由全国人民代表大会常务委员会于（）发布，自（ ）起实行</p>
+      <ul class="add">
+        <li class="sp1"><img src="./img/未选中.png" alt=""><span>A.2017年1月1日2017年6月1日</span></li>
+        <li class="sp2"><img src="./img/未选中.png" alt=""><span>B.2017年11月7日2017年 6月1日</span></li>
+        <li class="sp3"><img src="./img/未选中.png" alt=""><span>C.2017年 1月1日2017年 5月1日</span></li>
+        <li class="sp4"><img src="./img/未选中.png" alt=""><span>D.2016年1月11日2017年 5月1日</span></li>
+      </ul>
+      <img src="./img/提交.png" alt="" class="tijiao">
+    </div>
+    <div class="font1">
+      <p>2.网络相关行业组织按照章程，加强行业自律，制定网络安全行为规范，指导会员加强（），提高网络安全保护水平，促进行业健康发展。</p>
+      <ul class="add2">
+        <li class="sp1"><img src="./img/未选中.png" alt=""><span>A.网络安全责任</span></li>
+        <li class="sp2"><img src="./img/未选中.png" alt=""><span>B.网络安全意识</span></li>
+        <li class="sp3"><img src="./img/未选中.png" alt=""><span>C.网络安全保护</span></li>
+        <li class="sp4"><img src="./img/未选中.png" alt=""><span>D.网络安全防御</span></li>
+      </ul>
+      <img src="./img/提交.png" alt="" class="tijiao">
+    </div>
+    <div class="font3">
+      <p>3.《中华人民共和国网络安全法》是为保障网络安全，维护（）和国家安全。</p>
+      <ul class="add3">
+        <li class="sp1"><img src="./img/未选中.png" alt=""><span>A.网络安全</span></li>
+        <li class="sp2"><img src="./img/未选中.png" alt=""><span>B.网络主权</span></li>
+        <li class="sp3"><img src="./img/未选中.png" alt=""><span>C.网络空间主权</span></li>
+        <li class="sp4"><img src="./img/未选中.png" alt=""><span>D.信息安全</span></li>
+      </ul>
+      <img src="./img/提交.png" alt="" class="tijiao">
+    </div>
+    <div class="font4">
+      <p>4.根据《网络安全法》的规定，国家实行网络安全（）保护制度。</p>
+      <ul class="add4">
+        <li class="sp1"><img src="./img/未选中.png" alt=""><span>A.等级</span></li>
+        <li class="sp2"><img src="./img/未选中.png" alt=""><span>B.分层</span></li>
+        <li class="sp3"><img src="./img/未选中.png" alt=""><span>C.结构</span></li>
+        <li class="sp4"><img src="./img/未选中.png" alt=""><span>D.行政级别</span></li>
+      </ul>
+      <img src="./img/提交.png" alt="" class="tijiao">
+    </div>
+    <div class="font5">
+      <p>5.国家哪个部门负责统筹协调网络安全工作和相关监督管理工作？（）。</p>
+      <ul class="add5">
+        <li class="sp1"><img src="./img/未选中.png" alt=""><span>A.公安部门</span></li>
+        <li class="sp2"><img src="./img/未选中.png" alt=""><span>B.安全部门</span></li>
+        <li class="sp3"><img src="./img/未选中.png" alt=""><span>C.网信部门</span></li>
+        <li class="sp4"><img src="./img/未选中.png" alt=""><span>D.电信主管部门</span></li>
+      </ul>
+      <img src="./img/提交.png" alt="" class="tijiao">
+    </div>
+    <div class="zhezhao">
+      <img src="./img/x号.png" alt="" class="xback">
+      <h2>50</h2>
+      <h3>6</h3>
+      <h4>良好</h4>
+      <h5>6</h5>
+    </div>
+  </div> -->
+  <div class="section3">
+    <img src="./img/zpdx.png" alt="" class="zpdx">
+    <img src="./img/001.png" alt="" class="one">
+    <img src="./img/002.png" alt="" class="two">
+    <img src="./img/003.png" alt="" class="three">
+    <img src="./img/004.png" alt="" class="four">
+    <img src="./img/005.png" alt="" class="five">
+    <img src="./img/启航.png" alt="" class="qh">
+  </div>
+  <!-- <div class="section4">
+    <img src="./img/back.png" alt="" class="back">
+  </div> -->
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+ul,li{
+  list-style: none;
+}
+.section1{
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: pink;
+}
+#bt1{
+  height: calc(200rem/100) ;
+  position: absolute ;
+  top: calc(400rem/100);
+  left: 0;
+  font-size: calc(30rem/100);
+}
+#bt2{
+  height: calc(200rem/100);
+  margin-top: calc(10rem/100);
+  position: absolute;
+  top: calc(600rem/100) ;
+  left: 0;
+  font-size: calc(30rem/100);
+}
+#bt3{
+  height: calc(200rem/100);
+  position: absolute;
+  top: calc(810rem/100);
+  left: 0;
+  margin-top: calc(10rem/100);
+  font-size: calc(30rem/100) ;
+}
+.zp{
+  width: calc(160rem/100) ;
+  height: calc(100rem/100);
+  position: absolute;
+  right: calc(120rem/100) ;
+  top: calc(650rem/100) ;
+  animation: big 1s infinite linear alternate;
+}
+.jq{
+  width: calc(300rem/100);
+  height: calc(300rem/100);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: big 1s infinite 0.2s linear alternate;
+}
+.aq{
+  width: calc(400rem/100) ;
+  height: calc(300rem/100) ;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: big 1.2s infinite 0.3s linear alternate;
+}
+@keyframes big{
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.2);
+  }
+}

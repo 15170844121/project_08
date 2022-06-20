@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+ul,li{
+  list-style: none;
+}
+.section2{
+  width: 100%;
+  height: 100%;
+  background: url(../img/答题页面.png) no-repeat;
+  background-size: 100% 100%;
+  display: none;
+}
+.font{
+  display: block;
+}
+.font1{
+  display: none;
+}
+.font3{
+  display: none;
+}
+.font4{
+  display: none;
+}
+.font5{
+  display: none;
+}
+.font>p,.font1>p,.font3>p,.font4>p,.font5>p{
+  width: 5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5rem;
+  color: #fd8054;
+  font-size: 0.26rem;
+}
+.tijiao{
+  width: 1.8rem;
+  height: 0.9rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.3rem;
+}
+.add{
+  width: 6.65rem;
+  height: 6.3rem;
+  /* background-color: aqua; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6.5rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  color: #fd8054;
+  font-size: 0.26rem;
+}
+.add2,.add3,.add5{
+  width: 2.8rem;
+  height: 6.3rem;
+  /* background-color: aqua; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6.5rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  color: #fd8054;
+  font-size: 0.26rem;
+}
+.add4{
+  width: 1.9rem;
+  height: 6.3rem;
+  /* background-color: aqua; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6.5rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  color: #fd8054;
+  font-size: 0.26rem;
+}
+.add>.sp1,.add2>.sp1,.add3>.sp1,.add4>.sp1,.add5>.sp1{
+  margin-top: 0.3rem;
+}
+.add img,.add2 img,.add3 img,.add4 img,.add5 img{
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 0.2rem;
+}
+.sp2{
+  margin-top: -0.4rem;
+}
+.sp3{
+  margin-top: -0.3rem;
+}
+.sp4{
+  margin-top: -0.2rem;
+}
+.zhezhao{
+  width: 100%;
+  height: 100%;
+  background: url(../img/成绩.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  display: none;
+}
+.xback{
+  width: 0.95rem;
+  height: 0.95rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.zhezhao>h2{
+  position: absolute;
+  left: 2.2rem;
+  top: 4.78rem;
+  color: #da9324;
+  font-size: 0.5rem;
+  font-weight: 800;
+}
+.zhezhao>h3{
+  position: absolute;
+  left: 6.2rem;
+  top: 4.78rem;
+  color: #9dea94;
+  font-size: 0.5rem;
+  font-weight: 800;
+}
+.zhezhao>h4{
+  position: absolute;
+  left: 2rem;
+  top: 5.5rem;
+  color: #06cdfa;
+  font-size: 0.4rem;
+  font-weight: 800;
+}
+.zhezhao>h5{
+  position: absolute;
+  left: 6.2rem;
+  top: 5.5rem;
+  color: #06cdfa;
+  font-size: 0.5rem;
+  font-weight: 800;
+}
+
